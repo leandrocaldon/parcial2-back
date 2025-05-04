@@ -2,12 +2,11 @@
   "name": "quiz-categorias-backend",
   "version": "1.0.0",
   "description": "Backend para la aplicación de quiz de categorías",
-  "main": "server.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "install-deps": "npm install",
-    "setup": "echo 'Configurando backend...' && npm run install-deps && echo 'Backend configurado correctamente.'"
+    "start": "node api/index.js",
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,6 +16,7 @@
     "openai": "^4.97.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "vercel": "^32.3.0"
   }
 }
